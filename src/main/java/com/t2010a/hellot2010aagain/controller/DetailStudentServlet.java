@@ -8,7 +8,9 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class DetailStudentServlet extends HttpServlet {
 
@@ -29,10 +31,16 @@ public class DetailStudentServlet extends HttpServlet {
             req.setAttribute("message", "Student not found!");
             req.getRequestDispatcher("/admin/errors/404.jsp").forward(req, resp);
         } else {
+            HttpSession session = req.getSession();
+            ArrayList<Student> recentView =
+                    (ArrayList<Student>) session.getAttribute("recenView");
+
+
             // nếu có trả về trang detail
             req.setAttribute("student", student);
             req.getRequestDispatcher("/admin/students/detail.jsp").forward(req, resp);
         }
+
 
     }
 }

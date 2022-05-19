@@ -1,9 +1,10 @@
 package com.t2010a.hellot2010aagain.entity.ShoppingCart;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
-public class ShoppingCart {
-    private int userId; // ai đặt
+public class ShoppingCart implements ShoppingCartAction {
+    private int userId;
     private String shipName;
     private String shipPhone;
     private String shipAddress;
@@ -68,5 +69,25 @@ public class ShoppingCart {
 
     public void setItems(HashMap<String, CartItem> items) {
         this.items = items;
+    }
+
+    @Override
+    public void add(Product product, int quantity) {
+
+    }
+
+    @Override
+    public void update(Product product, int quantity) {
+
+    }
+
+    @Override
+    public void remove(Product product) {
+
+    }
+
+    @Override
+    public ArrayList<CartItem> getListItems() {
+        return null;
     }
 }

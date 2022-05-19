@@ -18,17 +18,6 @@ public class CartItem {
         this.quantity = quantity;
     }
 
-    @Override
-    public String toString() {
-        return "CartItem{" +
-                "productId=" + productId +
-                ", productName='" + productName + '\'' +
-                ", productThumbnail='" + productThumbnail + '\'' +
-                ", unitPrice=" + unitPrice +
-                ", quantity=" + quantity +
-                '}';
-    }
-
     public int getProductId() {
         return productId;
     }

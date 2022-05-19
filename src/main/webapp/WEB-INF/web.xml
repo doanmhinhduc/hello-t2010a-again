@@ -79,4 +79,20 @@
         <servlet-name>TemplateDemoListServlet</servlet-name>
         <url-pattern>/admin/template/list</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>information</servlet-name>
+        <servlet-class>com.t2010a.hellot2010aagain.controller.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>information</servlet-name>
+        <url-pattern>/admin/information</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>Login</servlet-name>
+        <servlet-class>com.t2010a.hellot2010aagain.controller.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Login</servlet-name>
+        <url-pattern>/admin/login</url-pattern>
+    </servlet-mapping>
 </web-app>

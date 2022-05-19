@@ -13,7 +13,7 @@ public class Student {
     private LocalDateTime dob;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
-    private int status; // xoá mềm
+    private int status;
 
     public Student(String rollNumber, String fullName, String email, String phone, LocalDateTime dob, LocalDateTime createdAt, LocalDateTime updatedAt, int status) {
         this.rollNumber = rollNumber;
